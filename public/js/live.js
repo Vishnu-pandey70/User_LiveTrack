@@ -40,7 +40,7 @@ $(function () {
     const $c = $('#users');
     $c.empty();
     if (!list || list.length === 0) {
-      $c.append('<div class="list-group-item">No live users connected.</div>');
+      $c.append('<div class="list-group-item">No  users connected.</div>');
       return;
     }
 
@@ -50,7 +50,7 @@ $(function () {
         <button type="button" class="list-group-item list-group-item-action user-item" data-email="${u.email}">
           <div class="d-flex w-100 justify-content-between">
             <h6 class="mb-1">${u.email}</h6>
-            <small>${u.socketId ? u.socketId : "Offline"}</small>
+            <small>${u.socketId ? "Online" : "Offline"}</small>
 
           </div>
           <p class="mb-1">${u.name || ''}</p>
